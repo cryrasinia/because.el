@@ -49,7 +49,7 @@
   (append-to-file nil nil because/bibliography-path)
   (kill-this-buffer))
 
-;; Make <M-q> kill the source-adding buffer
+;; Set up citation-mode minor mode
 ;; Thanks to https://emacs.stackexchange.com/a/520
 (setq because/citation-mode-map (make-keymap))
 (define-key because/citation-mode-map (kbd "M-s") 'because/append-buffer-to-citation-file)
@@ -72,7 +72,6 @@
 		 (get-buffer-create (generate-new-buffer-name "New Citation"))))
 	(switch-to-buffer tmp-buffer)
 	(org-mode)
-	(alt-q-kills-mode)
 	(because/citation-mode)
 	(insert (because/create-empty-citation "New Citation"))))
 
