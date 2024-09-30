@@ -1,5 +1,5 @@
 (setq-default because/bibliography-path "~/.emacs.d/bibliography.org")
-(setq-default because/citation-prefix (concat "file:" because/bibliography-path "#::"))
+(setq-default because/citation-prefix (concat "file:" because/bibliography-path "::#"))
 
 (defun char-increment
 	(c)
